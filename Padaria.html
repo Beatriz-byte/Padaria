@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Pão & Afeto — pães fresquinhos, doces e salgados feitos com carinho.">
+  <title>Pães Luke &amp; Cia</title>
+  <style>
+    :root { --ink:#3a281e; --cream:#fff8ed; --bread:#c8783d; --red:#9b4330; --muted:#725d4d; }
+    * { box-sizing:border-box; }
+    html { scroll-behavior:smooth; }
+    body { margin:0; color:var(--ink); background:var(--cream); font-family:Georgia, 'Times New Roman', serif; }
+    header { background:#fffdf8; border-bottom:1px solid #eadccc; }
+    .top { max-width:1120px; margin:auto; padding:18px 24px; display:flex; align-items:center; justify-content:space-between; gap:24px; }
+    .brand { color:var(--red); font-size:1.45rem; font-weight:bold; text-decoration:none; white-space:nowrap; }
+    nav { display:flex; flex-wrap:wrap; justify-content:flex-end; gap:8px 20px; }
+    nav a { color:var(--ink); font:600 .96rem Arial,sans-serif; text-decoration:none; padding:4px 2px; border-bottom:2px solid transparent; }
+    nav a:hover { color:var(--red); border-bottom-color:var(--red); }
+    nav a.ativo { color:var(--red); border-bottom-color:var(--red); }
+    .hero { min-height:440px; display:grid; place-items:center; text-align:center; padding:72px 24px; background:linear-gradient(90deg,rgba(43,27,17,.69),rgba(43,27,17,.23)), linear-gradient(135deg,#8b4b2e,#d6a36c 55%,#f0d5aa); color:white; }
+    .hero-inner { max-width:720px; }
+    .eyebrow { text-transform:uppercase; letter-spacing:.16em; font:700 .78rem Arial,sans-serif; }
+    h1 { margin:14px 0; font-size:clamp(2.5rem,7vw,4.7rem); line-height:1.02; }
+    .hero p { font-size:1.2rem; line-height:1.6; margin:0 auto 26px; max-width:600px; }
+    .button { display:inline-block; background:#fff8ed; color:var(--red); padding:13px 21px; border:0; border-radius:5px; font:700 .95rem Arial,sans-serif; text-decoration:none; cursor:pointer; }
+    .button:hover { background:var(--red); color:#fff; }
+    .button:focus-visible, nav a:focus-visible, .link-card:focus-visible { outline:3px solid var(--bread); outline-offset:2px; }
+    main { max-width:1120px; margin:auto; padding:64px 24px; }
+    .intro { text-align:center; max-width:680px; margin:0 auto 38px; }
+    h2 { font-size:2rem; margin:0 0 12px; }
+    .intro p,.card p { color:var(--muted); line-height:1.6; }
+    .cards { display:grid; grid-template-columns:repeat(3,1fr); gap:18px; }
+    .card { background:#fffdf8; border:1px solid #eadccc; border-radius:9px; padding:25px; transition:.2s; }
+    .card:hover { transform:translateY(-4px); box-shadow:0 6px 15px rgba(0,0,0,.18); border-color:var(--red); }
+    .link-card { display:inline-block; margin-top:12px; color:var(--red); font:700 .9rem Arial,sans-serif; text-decoration:underline; }
+    .link-card:hover { color:var(--bread); }
+
+    .icon { font-size:1.8rem; }
+    .card h3 { margin:12px 0 8px; font-size:1.35rem; }
+    .card p { margin:0; }
+    .callout { margin-top:48px; padding:28px; border-radius:9px; background:#f1e2cf; text-align:center; }
+    .callout p { color:var(--muted); }
+    .form-box { margin-top:48px; padding:28px; border-radius:9px; background:#fffdf8; border:1px solid #eadccc; max-width:620px; margin-left:auto; margin-right:auto; }
+    .form-box label { display:block; margin:14px 0 4px; font:700 .9rem Arial,sans-serif; }
+    .form-box input, .form-box textarea { width:100%; padding:10px; border:1px solid #cdb9a5; border-radius:5px; font:1rem Arial,sans-serif; }
+    .form-box input:focus, .form-box textarea:focus { outline:3px solid var(--bread); }
+    .form-box .button { margin-top:18px; background:var(--red); color:#fff; }
+    .form-box .button:hover { background:var(--bread); }
+    .form-box .button:disabled { opacity:.6; cursor:wait; }
+    #msg { margin-top:14px; font:700 1rem Arial,sans-serif; color:#2e7d32; }
+    footer { background:#3a281e; color:#fff8ed; padding:30px 24px; }
+    .foot { max-width:1120px; margin:auto; display:flex; justify-content:space-between; gap:20px; flex-wrap:wrap; font: .92rem Arial,sans-serif; }
+    footer a { color:#fff8ed; }
+    @media(max-width:760px) { .top { align-items:flex-start; flex-direction:column; } nav { justify-content:flex-start; } .cards { grid-template-columns:1fr; } .hero { min-height:380px; } }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="top">
+      <a class="brand" href="#inicio"><img src="logo-luke-cia.svg" alt="Pão & Afeto" height="300"></a>
+      <nav aria-label="Menu principal">
+        <a href="#doces">Doces</a>
+        <a href="#salgados">Salgados</a>
+        <a href="#encomendas">Encomendas</a>
+        <a href="#contato">Contato</a>
+        <a href="#trabalhe">Trabalhe Conosco</a>
+        <a href="#conta">Entrar</a>
+      </nav>
+    </div>
+  </header>
+  <section class="hero" id="inicio">
+    <div class="hero-inner">
+      <div class="eyebrow">Feito com carinho, todos os dias</div>
+      <h1>Um pedacinho de casa em cada mordida.</h1>
+      <p>Pães quentinhos, receitas de família e aquele cheirinho bom que você se sente em casa.</p>
+      <a class="button" href="#doces">Conheça nosso cardápio</a>
+    </div>
+  </section>
+  <main>
+    <div class="intro">
+      <h2>Bem-vindo à nossa padaria</h2>
+      <p>Na Pães Luke &amp; Cia, cada fornada é preparada com ingredientes selecionados e muito cuidado. Escolha algo gostoso de nosso cardápio e aproveite!</p>
+    </div>
+    <section class="cards" aria-label="Nossas opções">
+      <article class="card" id="doces"><div class="icon" aria-hidden="true">🍩</div><h3>Doces</h3><p>Bolos, tortas, sonhos e outras delícias para adoçar o seu dia.</p></article>
+      <article class="card" id="salgados"><div class="icon" aria-hidden="true">🥐</div><h3>Salgados</h3><p>Pães, empadas e salgados assados, sempre fresquinhos.</p></article>
+      <article class="card" id="Quitutes do bichanos"><div class="icon" aria-hidden="true">🐶😺</div><h3>Quitutes para os bichanos</h3><p>Pães, docinhos e muito mais para o nossos melhores amigos.</p></article>
+      <article class="card" id="encomendas"><div class="icon" aria-hidden="true">🎂</div><h3>Encomendas</h3><p>Conte sua ocasião para a gente preparar algo especial.</p><a class="link-card" href="#formulario">Fazer encomenda →</a></article>
+      <article class="card" id="contato"><div class="icon" aria-hidden="true">💬</div><h3>Contato</h3><p>Fale com nossa equipe para tirar dúvidas, elogios ou sugestões.</p><a class="link-card" href="#formulario">Enviar mensagem →</a></article>
+      <article class="card" id="trabalhe"><div class="icon" aria-hidden="true">🤝👩‍🍳</div><h3>Trabalhe Conosco</h3><p>Gosta de gente, de cozinha e de pão quentinho? Queremos conhecer você.</p></article>
+      <article class="card" id="conta"><div class="icon" aria-hidden="true">👤</div><h3>Entrar</h3><p>Acesse sua conta para acompanhar pedidos e guardar seus favoritos.</p></article>
+    </section>
+    <section class="callout">
+      <h2>Tem festa chegando?</h2>
+      <p>Deixe as delicias com a gente e aproveite cada momento.</p>
+      <a class="button" href="#formulario">Fazer encomenda</a>
+    </section>
+    <section class="form-box" id="formulario">
+      <h2>Faça sua encomenda</h2>
+      <form id="form-encomenda">
+        <label for="nome">Nome</label>
+        <input type="text" id="nome" required minlength="3" placeholder="Seu nome completo">
+
+        <label for="email">E-mail</label>
+        <input type="email" id="email" required placeholder="seu@email.com">
+
+        <label for="tel">Telefone</label>
+        <input type="tel" id="tel" required pattern="\(?\d{2}\)?\s?\d{4,5}-?\d{4}" title="Exemplo: (11) 95520-9719" placeholder="(11) 95520-9719">
+
+        <label for="data">Data da retirada</label>
+        <input type="date" id="data" required>
+
+        <label for="pedido">O que você quer encomendar?</label>
+        <textarea id="pedido" rows="3" required placeholder="Ex.: bolo de chocolate para 10 pessoas"></textarea>
+
+        <button class="button" type="submit" id="btn-enviar">Enviar encomenda</button>
+        <p id="msg" role="status"></p>
+      </form>
+    </section>
+  </main>
+  <footer>
+    <div class="foot"><span>© 2026 Pão &amp; Afeto</span><span>Aberto todos os dias, das 6h às 21h</span><span>Feito com carinho e servido bem quentinho!</span></div>
+  </footer>
+
+  <script>
+    var links = document.querySelectorAll('nav a');
+    links.forEach(function (link) {
+      link.addEventListener('click', function () {
+        links.forEach(function (l) { l.classList.remove('ativo'); });
+        link.classList.add('ativo');
+      });
+    });
+    var hoje = new Date().toISOString().split('T')[0];
+    document.getElementById('data').min = hoje;
+    document.getElementById('form-encomenda').addEventListener('submit', function (e) {
+      e.preventDefault();
+      if (!confirm('Deseja enviar a encomenda?')) { return; }   
+      var btn = document.getElementById('btn-enviar');
+      var msg = document.getElementById('msg');
+      btn.textContent = 'Enviando...';                           
+      btn.disabled = true;
+      msg.textContent = '';
+      setTimeout(function () {
+        msg.textContent = '✅ Encomenda enviada com sucesso! Entraremos em contato em breve.';
+        btn.textContent = 'Enviar encomenda';
+        btn.disabled = false;
+        e.target.reset();
+      }, 1000);
+    });
+  </script>
+</body>
+</html>
